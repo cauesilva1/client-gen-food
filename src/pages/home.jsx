@@ -14,10 +14,10 @@ const Home = () => {
   
   console.log("teste", token);
   return (
-    <div>
+    <div className="flex justify-center al">
     <h1>User Profile</h1>
     {token ? (
-      <div className="profile">
+      <div className="">
         <img src={token.picture} alt="foto usuario" />
         <p>Name: {token.name}</p>
         <p>Email: {token.email}</p>
