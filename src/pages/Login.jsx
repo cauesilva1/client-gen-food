@@ -5,7 +5,6 @@ import Input from "../components/input";
 import GoogleLoginButton from "../components/buttonGoogle";
 import Button from "../components/button";
 import { Link } from "react-router-dom";
-// import GoogleLoginButton from "../components/buttonGoogle";
 
 const Login = () => {
   useEffect(() => {});
