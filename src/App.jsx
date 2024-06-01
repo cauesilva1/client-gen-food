@@ -1,12 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Load from "./pages/Load.jsx";
 import Register from "./pages/Register.jsx";
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
-
-
+import "./App.css";
 
 function App() {
   return (
