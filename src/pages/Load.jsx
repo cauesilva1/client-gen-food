@@ -34,6 +34,6 @@ export default function Load() {
   return <div className="loadText">
     <h1>Loading...</h1>
 
-    <Link to={"/https://gen-food.vercel.app/teste"}>Logar</Link>
+    <a href="https://gen-food.vercel.app/teste">Logar</a>
     </div>;
 }
