@@ -1,15 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Load from "./pages/Load";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Load />} />
 
-        <button type="button" className="botaoLogin">Login with google</button>
-      </header>
-    </div>
+      </Routes>
+    </Router>
   );
 }
 
