@@ -25,7 +25,7 @@ const Login = () => {
               <Input
                 id="email"
                 placeholder="Email...."
-                value=""
+                
                 onChange={() => {}}
               />
               </div>
@@ -35,7 +35,6 @@ const Login = () => {
               <Input
                 id="Senha"
                 placeholder="Senha...."
-                value=""
                 onChange={() => {}}
               />
               </div>
