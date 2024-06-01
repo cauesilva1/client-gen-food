@@ -29,11 +29,21 @@ export default function Load() {
   }, []);
 
 
-  
+  async function Logar() {
+    try {
+      const response = await axios.get(
+        "https://gen-food.vercel.app/teste"
+      );
+      console.log("Data submitted successfully:", response.data);
+    } catch (error) {
+      console.error("There was an error submitting the data!", error);
+    }
+  }
+   
 
   return <div className="loadText">
     <h1>Loading...</h1>
 
-    <a href="https://gen-food.vercel.app/teste">Logar</a>
+    <button onClick={Logar()}>Logar</button>
     </div>;
 }
