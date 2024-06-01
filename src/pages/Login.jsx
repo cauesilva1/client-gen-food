@@ -1,24 +1,69 @@
+import axios from "axios";
+import React, { useEffect } from "react";
+import "../stylePages/Login.css";
+import Input from "../components/input";
+
+import Button from "../components/button";
+
 const Login = () => {
+  useEffect(() => {});
+
   return (
     <>
-      <div
-        id="g_id_onload"
-        data-client_id="151694659552-h0ftgtujq9nd3s2567rbhjn8m4qhipnt.apps.googleusercontent.com"
-        data-context="signup"
-        data-ux_mode="popup"
-        data-login_uri="https://gen-food.vercel.app/login"
-        data-auto_prompt="false"
-      ></div>
+      {
+        <div className="fullPage">
+          <div className="Card">
+            <h1>LOGIN</h1>
 
-      <div
-        class="g_id_signin"
-        data-type="standard"
-        data-shape="pill"
-        data-theme="outline"
-        data-text="continue_with"
-        data-size="large"
-        data-logo_alignment="left"
-      ></div>
+            <div className="inputs">
+
+              <div className="inputwithlabel">
+                <label htmlFor="email">Email:</label>
+              <Input
+                id="email"
+                placeholder="Email...."
+                value=""
+                onChange={() => {}}
+              />
+              </div>
+
+              <div className="inputwithlabel">
+                <label htmlFor="Nome">Nome:</label>
+              <Input
+                id="Nome"
+                placeholder="Nome...."
+                value=""
+                onChange={() => {}}
+              />
+              </div>  
+
+              <div className="inputwithlabel">
+                <label htmlFor="Senha">Senha:</label>
+              <Input
+                id="Senha"
+                placeholder="Senha...."
+                value=""
+                onChange={() => {}}
+              />
+              </div>
+
+              <div className="inputwithlabel">
+                <label htmlFor="ConfirmarSenha">Confirmar Senha:</label>
+              <Input
+                id="ConfirmarSenha"
+                placeholder="ConfirmarSenha...."
+                value=""
+                onChange={() => {}}
+              />
+              </div>
+
+            </div>
+
+
+            <Button onclick={() => {}} children="Login" className="button" />
+          </div>
+        </div>
+      }
     </>
   );
 };
