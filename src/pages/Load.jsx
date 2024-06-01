@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-export default function Load() {
+ const Load = () => {
  const navigate = useNavigate();
 
   useEffect(() => {
@@ -40,3 +40,5 @@ export default function Load() {
     </div>
   );
 }
+
+export default Load;
