@@ -31,7 +31,11 @@ export default function Load() {
   async function Logar() {
     try {
       const response = await axios.get(
-        "https://gen-food.vercel.app/teste"
+        "https://gen-food.vercel.app/teste",
+        Headers = {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        }
       );
       console.log("Data submitted successfully:", response.data);
     } catch (error) {
