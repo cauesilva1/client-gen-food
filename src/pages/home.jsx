@@ -24,7 +24,7 @@ const Home = () => {
         {/* Renderizar outras informações do usuário conforme necessário */}
       </div>
     ) : (
-      <p>No user data found</p>
+      <p>No user data found.</p>
     )}
   </div>
   );
