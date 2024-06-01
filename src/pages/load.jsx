@@ -7,12 +7,10 @@ import {  useNavigate } from "react-router-dom";
 
 
 export default function Load() {
-  const [url, setUrl] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     const fullUrl = window.location.href;
-    setUrl(fullUrl);
 
     const token = fullUrl.split("#")[1];
 
@@ -33,7 +31,7 @@ export default function Load() {
     };
 
     EnviarJwt();
-  }, []);
+  }, [navigate]);
 
   
 
