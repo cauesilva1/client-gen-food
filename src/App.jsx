@@ -5,12 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Load from "./pages/Load";
 import Login from "./pages/login";
 import Register from "./pages/register";
+import Home from "./pages/home";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Load />} />
+        <Route path="/loading" element={<Load />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
