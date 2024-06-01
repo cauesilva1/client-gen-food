@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "./pages/login";
-import Load from "./pages/load";
+import Login from "./pages/Login.jsx";
+import Load from "./pages/Load.jsx";
 
 function App() {
   return (

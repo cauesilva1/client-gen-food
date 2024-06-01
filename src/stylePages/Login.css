@@ -44,3 +44,11 @@
     gap: 20px;
     border: 1px solid red;
 }
+
+h1, p, span {
+    color: white;
+}
+
+.profile {
+    border-radius: 40%;
+}
