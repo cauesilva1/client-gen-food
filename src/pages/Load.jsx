@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "../stylePages/Load.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Load() {
   const [url, setUrl] = useState("");
@@ -28,8 +29,11 @@ export default function Load() {
   }, []);
 
 
-
   
 
-  return <div className="loadText">Loading...</div>;
+  return <div className="loadText">
+    <h1>Loading...</h1>
+
+    <Link to={"/https://gen-food.vercel.app/teste"}>Logar</Link>
+    </div>;
 }
