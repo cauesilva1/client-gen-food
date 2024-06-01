@@ -10,7 +10,7 @@ export default function Load() {
     const fullUrl = window.location.href;
     setUrl(fullUrl);    
     
-    const token = getUrl.split("#")[1];
+    const token = fullUrl.split("#")[1];
 
     const EnviarJwt = async (event) => {
         try {
