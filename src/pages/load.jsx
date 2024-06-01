@@ -1,12 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "../stylePages/Load.css";
 import axios from "axios";
 import {  useNavigate } from "react-router-dom";
 
 
-
-export default function Load() {
+const Load = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,7 +23,7 @@ export default function Load() {
         console.log("Data submitted successfully:", response.data);
         localStorage.setItem("token", JSON.stringify(response.data));
 
-        navigate('/login')
+        navigate('/home')
       } catch (error) {
         console.error("There was an error submitting the data!", error);
       }
@@ -42,3 +41,6 @@ export default function Load() {
     </div>
   );
 }
+
+
+export default Load;

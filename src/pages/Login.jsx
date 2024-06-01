@@ -1,33 +1,31 @@
-import React, { useEffect, useState } from "react";
-import "../stylePages/Login.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [token, setToken] = useState();
-
-  useEffect(() => {
-    // Recuperar os dados do localStorage
-    const storedData = localStorage.getItem("token");
-    const objInfo = JSON.parse(storedData);
-    
-    setToken(objInfo);
-  }, []);
-  
-  console.log("teste", token);
   return (
-    <div>
-    <h1>User Profile</h1>
-    {token ? (
-      <div className="profile">
-        <img src={token.picture} alt="foto usuario" />
-        <p>Name: {token.name}</p>
-        <p>Email: {token.email}</p>
-        {/* Renderizar outras informações do usuário conforme necessário */}
-      </div>
-    ) : (
-      <p>No user data found</p>
-    )}
-  </div>
+    <>
+      <div
+        id="g_id_onload"
+        data-client_id="151694659552-h0ftgtujq9nd3s2567rbhjn8m4qhipnt.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-login_uri="https://gen-food.vercel.app/login"
+        data-auto_prompt="false"
+      ></div>
+
+      <div
+        class="g_id_signin"
+        data-type="standard"
+        data-shape="rectangular"
+        data-theme="outline"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left"
+      ></div>
+
+      <Link to={"https://gen-food.vercel.app/login"}>Login com Google</Link>
+    </>
   );
 };
+
 
 export default Login;
