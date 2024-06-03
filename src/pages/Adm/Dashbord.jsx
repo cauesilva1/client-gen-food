@@ -33,7 +33,6 @@ const Dashbord = () => {
     },
   ];
 
-
   const handleChatItemClick = (index) => {
     setSelectedChatIndex(index);
   };
@@ -41,11 +40,11 @@ const Dashbord = () => {
   return (
     <div className="fullPageDashbord">
       {/* Cabeçalho */}
-      <div className="bg-slate-100 w-[100%] h-8 flex justify-center items-center">
-        <h1 className="text-black">Voltar</h1>
+      <div className=" w-[100%] h-8 flex justify-center items-center px-10 py-6 border-b border-gray-700">
+        <h1 className="text-white text-2xl">||||||||||</h1>
         <div className="flex justify-center items-center gap-10 w-full">
-          <h1 className="text-black">Home</h1>
-          <h1 className="text-black">Produtos</h1>
+          <h1 className="text-white text-2xl">Home</h1>
+          <h1 className="text-white text-2xl">Produtos</h1>
         </div>
       </div>
 
@@ -65,8 +64,8 @@ const Dashbord = () => {
         </div>
 
         {/* Detalhes do chat selecionado */}
-        <div className="flex flex-col w-[50%] h-full justify-around">
-          <div className="w-full h-[60%] border rounded">
+        <div className="flex flex-col w-[50%] h-full gap-[70px]">
+          <div className="w-full h-[55%] border rounded">
             {selectedChatIndex !== null && (
               <Chat
                 profileImage={chats[selectedChatIndex].profileImage}
@@ -75,39 +74,55 @@ const Dashbord = () => {
               />
             )}
           </div>
-          <div className="bg-slate-700 w-full h-20%">
-    <h2 className="text-white text-center font-bold text-lg mb-2">Pedidos</h2>
-    <table className="w-full border-collapse">
-        <thead>
-            <tr className="bg-slate-700 text-white">
-                <th className="py-2 px-4 border border-white">Número do Pedido</th>
-                <th className="py-2 px-4 border border-white">Nome do Cliente</th>
-                <th className="py-2 px-4 border border-white">Hora de Criação</th>
-            </tr>
-        </thead>
-        <tbody>
-            {/* Linha 1 */}
-            <tr className="bg-slate-800 text-white">
-                <td className="py-2 px-4 border border-white">001</td>
-                <td className="py-2 px-4 border border-white">João Silva</td>
-                <td className="py-2 px-4 border border-white">10:00</td>
-            </tr>
-            {/* Linha 2 */}
-            <tr className="bg-slate-800 text-white">
-                <td className="py-2 px-4 border border-white">002</td>
-                <td className="py-2 px-4 border border-white">Maria Souza</td>
-                <td className="py-2 px-4 border border-white">11:30</td>
-            </tr>
-            {/* Linha 3 */}
-            <tr className="bg-slate-800 text-white">
-                <td className="py-2 px-4 border border-white">003</td>
-                <td className="py-2 px-4 border border-white">Carlos Oliveira</td>
-                <td className="py-2 px-4 border border-white">13:45</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
+          <div className="bg-slate-700 w-full h-[30%]">
+            <h2 className="text-white text-center font-bold text-lg mb-2">
+              Pedidos
+            </h2>
+
+            <div className="max-h-full overflow-y-auto scrollbar-thin">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-slate-700 text-white">
+                    <th className="py-2 px-4 border border-white">
+                      Número do Pedido
+                    </th>
+                    <th className="py-2 px-4 border border-white">
+                      Nome do Cliente
+                    </th>
+                    <th className="py-2 px-4 border border-white">
+                      Hora de Criação
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-slate-800 text-white">
+                    <td className="py-2 px-4 border border-white">001</td>
+                    <td className="py-2 px-4 border border-white">
+                      João Silva
+                    </td>
+                    <td className="py-2 px-4 border border-white">10:00</td>
+                  </tr>
+
+                  <tr className="bg-slate-800 text-white">
+                    <td className="py-2 px-4 border border-white">002</td>
+                    <td className="py-2 px-4 border border-white">
+                      Maria Souza
+                    </td>
+                    <td className="py-2 px-4 border border-white">11:30</td>
+                  </tr>
+
+                  <tr className="bg-slate-800 text-white">
+                    <td className="py-2 px-4 border border-white">003</td>
+                    <td className="py-2 px-4 border border-white">
+                      Carlos Oliveira
+                    </td>
+                    <td className="py-2 px-4 border border-white">13:45</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
