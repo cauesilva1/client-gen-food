@@ -9,21 +9,11 @@ const Register = () => {
     return (
         <div className="fullPage">
           <div className="Card">
-          <GoogleLoginButton children={"registro com Google"}/>
+          <GoogleLoginButton children={"Login com Google"}/>
 
             <div className="divisor"></div>
 
             <div className="inputs">
-
-            <div className="inputwithlabel">
-                <label htmlFor="Nome">Nome:</label>
-              <Input
-                id="Nome"
-                placeholder="Nome...."
-                value=""
-                onChange={() => {}}
-              />
-              </div>
 
               <div className="inputwithlabel">
                 <label htmlFor="email">Email:</label>
@@ -45,22 +35,13 @@ const Register = () => {
               />
               </div>
 
-              <div className="inputwithlabel">
-                <label htmlFor="Confirmar">Confirmar senha:</label>
-              <Input
-                id="Confirmar"
-                placeholder="Confirmar...."
-                value=""
-                onChange={() => {}}
-              />
-              </div>
-
             </div>
 
  
             <Button onclick={() => {}} children="register" className="button" />
             <div className="links">
             <Link className="link">Esqueceu a senha?</Link>
+            <Link className="link">Não tem uma conta?</Link>
             </div>
             
 
