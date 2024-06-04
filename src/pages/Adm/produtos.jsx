@@ -118,6 +118,12 @@ function Produtos() {
     setSelectedCategory(category); // Atualiza a categoria selecionada
   };
 
+  const handleDelete = (index) => {
+    const updatedProducts = [...products];
+    updatedProducts.splice(index, 1);
+    setProducts(updatedProducts);
+  };
+
   return (
     <div className="fullPageProdutos">
       <div className="p-4">
@@ -150,7 +156,7 @@ function Produtos() {
           ))}
         </div>
 
-        <ProductList products={products} />
+        <ProductList products={products} onDelete={handleDelete}/>
 
         {isModalOpen && (
           <AddProductModal 
