@@ -16,12 +16,9 @@ const Load = () => {
     const EnviarJwt = async () => {
      
       try {
-        const response = await axios.post('https://gen-food.vercel.app/loadUser', { token }, {
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          withCredentials: true // Certifique-se de que o axios envia cookies
-        });
+        const response = await axios.post('https://gen-food.vercel.app/loadUser',
+        token 
+        );
         localStorage.setItem("token", JSON.stringify(response.data));
         console.log("Data submitted successfully:", response.data);
 
