@@ -18,7 +18,13 @@ const Load = () => {
       try {
         const response = await axios.post(
           "https://gen-food.vercel.app/loadUser",
-          token 
+          { token },
+          {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+              "Access-Control-Allow-Origin": "*",
+            },
+          }
         );
         console.log("Data submitted successfully:", response.data);
         localStorage.setItem("token", JSON.stringify(response.data));
